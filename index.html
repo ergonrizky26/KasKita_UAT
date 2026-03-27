@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>KasKita - UAT</title>
 
   <link rel="icon" type="image/png" href="assets/kaskita-icon-blackk.png">
   <link rel="apple-touch-icon" href="assets/kaskita-icon-blackk.png">
+
+  <style>
+    /* 2. Menghilangkan margin dan memastikan iframe memenuhi layar */
+    body, html { 
+      margin: 0; 
+      padding: 0; 
+      width: 100%; 
+      height: 100%; 
+      overflow: hidden; 
+      background-color: #f8f9fa;
+    }
+    
+    iframe { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      border: none;
+      /* 3. Memastikan iframe bisa di-scroll dan menerima input */
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto;
+    }
+  </style>
 </head>
 <body>
   <iframe 
     src="https://script.google.com/macros/s/AKfycbwPUgZVlY830_ToElkSrW7q7mP2CEH07aMt11QoJa7d8rgKGIHh3nCCRrkpHBtReM2i/exec"
-    width="100%"
-    height="100%"
-    allowfullscreen="true"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    allow="clipboard-read; clipboard-write; geolocation; camera;"
+    allowfullscreen>
   </iframe>
 
   <script>
